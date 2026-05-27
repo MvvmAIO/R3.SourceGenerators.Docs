@@ -54,6 +54,7 @@ const zhSidebar = [
 ]
 
 export default defineConfig({
+  srcDir: 'docs',
   title: 'R3.SourceGenerators',
   description: 'Roslyn source generators for R3-based MVVM workflows',
   base: '/R3.SourceGenerators.Docs/',
