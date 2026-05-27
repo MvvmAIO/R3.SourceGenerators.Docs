@@ -1,0 +1,8 @@
+:root {
+  --vp-c-brand-1: #5b6ee8;
+  --vp-c-brand-2: #4a5cd4;
+}
+
+.vp-doc div[class*='language-'] {
+  font-size: 0.92em;
+}
