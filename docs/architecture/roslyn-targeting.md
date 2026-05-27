@@ -1,7 +1,7 @@
 # Roslyn targeting
 
 ::: tip Languages
-[简体中文](/zh/architecture/roslyn-targeting)
+[简体中文](../zh/architecture/roslyn-targeting)
 :::
 
 ## Multi-Roslyn builds

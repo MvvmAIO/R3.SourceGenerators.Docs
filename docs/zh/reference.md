@@ -1,7 +1,7 @@
 # 参考与链接
 
 ::: tip 语言
-[English](/reference)
+[English](../reference)
 :::
 
 ## 包与源码

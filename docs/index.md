@@ -28,7 +28,7 @@ features:
 ## Stability
 
 ::: warning Pre-1.0
-Until **1.0.0**, breaking changes may ship without a long deprecation window. Review [CHANGELOG](https://github.com/MvvmAIO/MvvmAIO.R3.SourceGenerators/blob/master/CHANGELOG.md) when upgrading.
+Until **1.0.0**, breaking changes may ship without a long deprecation window. Review the [changelog](./changelog.md) and [GitHub CHANGELOG](https://github.com/MvvmAIO/MvvmAIO.R3.SourceGenerators/blob/master/CHANGELOG.md) when upgrading.
 :::
 
 ## Where to read next

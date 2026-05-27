@@ -18,6 +18,6 @@ Built with **VitePress** on **Node.js** — intentionally different from the [Pr
 ## Languages
 
 - **English** — default
-- **[简体中文](/zh/)** — same topics under `/zh/`
+- **[简体中文](./zh/)** — same topics under `/zh/`
 
 When generator behavior or **R3SG** diagnostics change, update the matching pages in **both** locales (or file a docs PR alongside the generator PR).

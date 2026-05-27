@@ -1,7 +1,7 @@
 # 诊断参考
 
 ::: tip 语言
-[English](/diagnostics/reference)
+[English](../../diagnostics/reference)
 :::
 
 以下 ID 以生成器仓库 **`DiagnosticDescriptors.cs`** 为准。**R3SG** 为权威标识。

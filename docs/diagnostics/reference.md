@@ -1,7 +1,7 @@
 # Diagnostics reference
 
 ::: tip Languages
-[简体中文](/zh/diagnostics/reference)
+[简体中文](../zh/diagnostics/reference)
 :::
 
 Compiler messages below are defined in **`DiagnosticDescriptors.cs`** in the generator repository. **R3SG** IDs are authoritative; this table is for navigation.

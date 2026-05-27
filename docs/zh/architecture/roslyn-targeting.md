@@ -1,7 +1,7 @@
 # Roslyn 目标
 
 ::: tip 语言
-[English](/architecture/roslyn-targeting)
+[English](../../architecture/roslyn-targeting)
 :::
 
 ## 多版本分析器

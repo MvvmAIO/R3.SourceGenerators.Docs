@@ -1,7 +1,7 @@
 # Getting started
 
 ::: tip Languages
-[简体中文](/zh/getting-started)
+[简体中文](./zh/getting-started)
 :::
 
 ## Install the package
@@ -68,10 +68,19 @@ dotnet build
 
 Unresolved **R3SG** errors point to [Diagnostics reference](./diagnostics/reference.md).
 
+## Reading order
+
+1. **This page** — install, `partial` types, first `FromEvents()` call  
+2. **[Observable events](./generators/observable-events.md)** — main guide (interface model, routed events, `FromEventHandlers`)  
+3. **[R3Command](./generators/r3-command.md)** — command properties  
+4. **[Diagnostics reference](./diagnostics/reference.md)** — every **R3SG** id  
+5. **[Changelog](./changelog.md)** — releases and upgrade notes  
+
 ## Next steps
 
 | Topic | Link |
 |-------|------|
+| Observable events (primary guide) | [Observable events](./generators/observable-events.md) |
 | Command generation | [R3Command](./generators/r3-command.md) |
 | Repository layout | [Architecture overview](./architecture/overview.md) |
 | Runnable demos | [Samples](./samples.md) |

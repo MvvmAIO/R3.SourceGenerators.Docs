@@ -1,7 +1,7 @@
 # Observable events
 
 ::: tip Languages
-[简体中文](/zh/generators/observable-events)
+[简体中文](../zh/generators/observable-events)
 :::
 
 **MvvmAIO.R3.SourceGenerators** turns CLR and routed events into **R3** observables. Extension methods live in **`R3.SourceGenerators`**; each event is a **property** on a generated **internal interface** — chain `source.FromEvents().EventName` and subscribe with R3.

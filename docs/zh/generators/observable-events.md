@@ -1,7 +1,7 @@
 # Observable 事件
 
 ::: tip 语言
-[English](/generators/observable-events)
+[English](../../generators/observable-events)
 :::
 
 **MvvmAIO.R3.SourceGenerators** 将 CLR 与路由事件转为 **R3** 可观察流。扩展方法位于 **`R3.SourceGenerators`**；每个事件对应生成 **internal 接口** 上的一个**属性** — 链式写法为 `source.FromEvents().事件名`，再用 R3 订阅。

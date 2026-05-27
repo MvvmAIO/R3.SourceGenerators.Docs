@@ -1,7 +1,7 @@
 # 快速开始
 
 ::: tip 语言
-[English](/getting-started)
+[English](../getting-started)
 :::
 
 ## 安装包
@@ -67,3 +67,20 @@ dotnet build
 ```
 
 **R3SG** 错误请参阅 [诊断参考](./diagnostics/reference.md)。
+
+## 阅读顺序
+
+1. **本页** — 安装、`partial`、首个 `FromEvents()`  
+2. **[Observable 事件](./generators/observable-events.md)** — 主指南（接口模型、路由、`FromEventHandlers`）  
+3. **[R3Command](./generators/r3-command.md)** — 命令属性  
+4. **[诊断参考](./diagnostics/reference.md)** — 全部 **R3SG**  
+5. **[更新日志](./changelog.md)** — 版本与升级说明  
+
+## 下一步
+
+| 主题 | 链接 |
+|------|------|
+| Observable 事件（主指南） | [Observable 事件](./generators/observable-events.md) |
+| 命令生成 | [R3Command](./generators/r3-command.md) |
+| 仓库结构 | [架构总览](./architecture/overview.md) |
+| 可运行示例 | [示例](./samples.md) |

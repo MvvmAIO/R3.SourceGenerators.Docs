@@ -1,7 +1,7 @@
 # 构建与 CI
 
 ::: tip 语言
-[English](/build-and-ci)
+[English](../build-and-ci)
 :::
 
 ## 生成器仓库

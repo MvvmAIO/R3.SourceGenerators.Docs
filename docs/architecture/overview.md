@@ -1,7 +1,7 @@
 # Architecture overview
 
 ::: tip Languages
-[简体中文](/zh/architecture/overview)
+[简体中文](../zh/architecture/overview)
 :::
 
 ## Repositories
@@ -45,6 +45,33 @@ Static `ObservableEventsStatics` generation is **disabled**.
 ### R3Command pipeline (summary)
 
 Post-init attribute registration, partial-type validation, signature matrix checks, optional `CanExecute` wiring.
+
+## Call-site driven generation
+
+Code is emitted when your project **calls** an entry API (`FromEvents()`, `FromRoutedEvents()`, and so on) on a concrete type. The generator records those types and emits matching interfaces and `sealed` implementations on the next build.
+
+## Bootstrap and unresolved call sites
+
+A small **post-init** layer provides fallback extensions (for example on `object?`) so incomplete solutions still compile. These stubs are hidden from typical IntelliSense in consuming assemblies; type-specific generated overloads win at real call sites. Types with no usable events may resolve to **`NullEvents`** until proper generation runs.
+
+## WPF vs Avalonia
+
+| Platform | Requirement |
+|----------|-------------|
+| **WPF** routed events | `<UseWPF>true</UseWPF>` in the consumer project |
+| **Avalonia** routed | `RoutedEvent` metadata on event symbols; parameterless overloads use default routes |
+| **Attached** routed (Avalonia) | Separate `FromAttachedRoutedEvent` APIs — **not** the interface property model |
+
+Details: [Observable events](../generators/observable-events.md).
+
+## Generated file layout
+
+See the **Generated artifacts** table on [Observable events](../generators/observable-events.md). Per-type files such as `{Type}.FromEvents.g.cs` sit beside shared `EventInterfaces.*.g.cs` bundles.
+
+## Not generated today
+
+- **Static** observable helpers (`OBS_*` / `ObservableEventsStatics`) — disabled in current releases.
+- Unsupported event delegates are skipped with **R3SG2001** / **R3SG2002** warnings.
 
 ## Source map (contributors)
 

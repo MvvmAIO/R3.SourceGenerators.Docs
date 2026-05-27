@@ -7,6 +7,7 @@ const enSidebar = [
   { text: 'Introduction', link: '/' },
   { text: 'About this site', link: '/about-this-site' },
   { text: 'Getting started', link: '/getting-started' },
+  { text: 'Changelog', link: '/changelog' },
   {
     text: 'Generators',
     items: [
@@ -32,6 +33,7 @@ const zhSidebar = [
   { text: '概览', link: '/zh/' },
   { text: '关于本站', link: '/zh/about-this-site' },
   { text: '快速开始', link: '/zh/getting-started' },
+  { text: '更新日志', link: '/zh/changelog' },
   {
     text: '源生成器',
     items: [
@@ -60,14 +62,13 @@ export default defineConfig({
   base: '/R3.SourceGenerators.Docs/',
   cleanUrls: true,
   lastUpdated: true,
-  // Cross-locale and repo-root links are validated loosely during CI build.
-  ignoreDeadLinks: true,
   head: [
     [
       'link',
       {
         rel: 'icon',
-        href: '/R3.SourceGenerators.Docs/favicon.ico',
+        href: '/R3.SourceGenerators.Docs/favicon.svg',
+        type: 'image/svg+xml',
       },
     ],
   ],

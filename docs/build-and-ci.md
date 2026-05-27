@@ -1,7 +1,7 @@
 # Build and CI
 
 ::: tip Languages
-[简体中文](/zh/build-and-ci)
+[简体中文](./zh/build-and-ci)
 :::
 
 ## Generator repository

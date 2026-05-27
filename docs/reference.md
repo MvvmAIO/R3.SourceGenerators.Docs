@@ -1,7 +1,7 @@
 # Reference and links
 
 ::: tip Languages
-[简体中文](/zh/reference)
+[简体中文](./zh/reference)
 :::
 
 ## Packages and source

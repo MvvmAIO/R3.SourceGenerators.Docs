@@ -1,7 +1,7 @@
 # Contributing
 
 ::: tip Languages
-[简体中文](/zh/contributing)
+[简体中文](./zh/contributing)
 :::
 
 ## Generator changes
@@ -23,6 +23,22 @@ Work in **[R3.SourceGenerators.Docs](https://github.com/MvvmAIO/R3.SourceGenerat
 - 简体中文: `docs/zh/`
 
 When **R3SG** diagnostics or user-visible generator behavior changes, update **both** [Diagnostics reference](./diagnostics/reference.md) and the relevant generator pages in **both** locales.
+
+Local preview: `npm install` then `npm run docs:dev` (Node.js 22 — use the repository root `.nvmrc` with nvm).
+
+## Documentation release sync
+
+When a new **MvvmAIO.R3.SourceGenerators** package version is published, sync this site (English **and** `docs/zh/`):
+
+| Docs path | Update when |
+|-----------|-------------|
+| `diagnostics/reference.md` | Any **R3SG** id or message change |
+| `generators/observable-events.md` | Event / routed API or codegen behavior |
+| `generators/r3-command.md` | `[R3Command]` or command diagnostics |
+| `getting-started.md` | Install or prerequisites |
+| `changelog.md` | Each dated release (summary bullets) |
+
+Authoritative package history: [generator CHANGELOG](https://github.com/MvvmAIO/MvvmAIO.R3.SourceGenerators/blob/master/CHANGELOG.md).
 
 ## Pre-1.0
 

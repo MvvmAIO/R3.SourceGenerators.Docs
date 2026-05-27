@@ -43,4 +43,4 @@ features:
 
 本站为包的**权威手册**，比 GitHub README 更完整。参见 [关于本站](./about-this-site.md)。
 
-[English](/)
+[English](../)
