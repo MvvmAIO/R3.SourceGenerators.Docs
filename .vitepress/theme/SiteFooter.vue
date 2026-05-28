@@ -1,9 +1,43 @@
 <script setup lang="ts">
-import { computed } from 'vue'
+import { computed, onMounted, onUnmounted, ref, watch } from 'vue'
 import { useData } from 'vitepress'
 import { commitUrl, siteMeta } from '../site-meta.shared'
 
 const { theme, frontmatter, localeIndex } = useData()
+
+const footerRef = ref<HTMLElement | null>(null)
+let resizeObserver: ResizeObserver | undefined
+
+function syncFooterOffset() {
+  const height = footerRef.value?.offsetHeight ?? 0
+  document.documentElement.style.setProperty(
+    '--vp-site-footer-offset',
+    `${height}px`,
+  )
+}
+
+function clearFooterOffset() {
+  document.documentElement.style.removeProperty('--vp-site-footer-offset')
+}
+
+onMounted(() => {
+  syncFooterOffset()
+  resizeObserver = new ResizeObserver(syncFooterOffset)
+  if (footerRef.value) resizeObserver.observe(footerRef.value)
+})
+
+onUnmounted(() => {
+  resizeObserver?.disconnect()
+  clearFooterOffset()
+})
+
+watch(
+  () => frontmatter.value.footer,
+  (show) => {
+    if (show === false) clearFooterOffset()
+    else syncFooterOffset()
+  },
+)
 
 const isZh = computed(() => localeIndex.value === 'zh')
 
@@ -24,7 +58,11 @@ const buildLink = computed(() => commitUrl(siteMeta.commitSha))
 </script>
 
 <template>
-  <footer v-if="frontmatter.footer !== false" class="VPFooter site-footer">
+  <footer
+    v-if="frontmatter.footer !== false"
+    ref="footerRef"
+    class="VPFooter site-footer site-footer--fixed"
+  >
     <div class="container">
       <p v-if="theme.footer?.message" class="message">
         {{ theme.footer.message }}
