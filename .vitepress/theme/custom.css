@@ -85,3 +85,37 @@
 .VPHero .text {
   max-width: 760px;
 }
+
+.site-footer .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.site-footer-meta {
+  margin: 4px 0 0;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--vp-c-text-2);
+}
+
+.site-footer-meta time {
+  color: var(--vp-c-text-1);
+}
+
+.site-footer-meta .sep {
+  margin: 0 0.35em;
+  opacity: 0.55;
+}
+
+.site-footer-link {
+  color: var(--vp-c-brand-1);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.site-footer-link:hover {
+  color: var(--vp-c-brand-2);
+  text-decoration: underline;
+}

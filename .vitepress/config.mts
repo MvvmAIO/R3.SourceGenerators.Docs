@@ -1,4 +1,7 @@
 import { defineConfig } from 'vitepress'
+import { readSiteMeta } from './site-meta.node'
+
+const siteBuildMeta = readSiteMeta()
 
 const githubGenerator =
   'https://github.com/MvvmAIO/MvvmAIO.R3.SourceGenerators'
@@ -57,6 +60,11 @@ const zhSidebar = [
 
 export default defineConfig({
   srcDir: 'docs',
+  vite: {
+    define: {
+      __SITE_META__: JSON.stringify(siteBuildMeta),
+    },
+  },
   title: 'R3.SourceGenerators',
   description: 'Roslyn source generators for R3-based MVVM workflows',
   base: '/R3.SourceGenerators.Docs/',
@@ -98,6 +106,7 @@ export default defineConfig({
             'https://github.com/MvvmAIO/R3.SourceGenerators.Docs/edit/main/docs/:path',
           text: 'Edit this page on GitHub',
         },
+        lastUpdatedText: 'Last updated',
       },
     },
     zh: {
@@ -117,6 +126,11 @@ export default defineConfig({
             'https://github.com/MvvmAIO/R3.SourceGenerators.Docs/edit/main/docs/zh/:path',
           text: '在 GitHub 上编辑此页',
         },
+        footer: {
+          message: '基于 MIT 许可证发布。',
+          copyright: 'Copyright © MvvmAIO',
+        },
+        lastUpdatedText: '页面最后更新于',
       },
     },
   },
