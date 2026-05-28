@@ -18,7 +18,7 @@ Primary solution: **`MvvmAIO.R3.SourceGenerators.slnx`**
 
 | Project / folder | Role |
 |------------------|------|
-| `MvvmAIO.R3.SourceGenerators/` | Shared generator logic (`.shproj` / `.projitems`) |
+| `MvvmAIO.R3.SourceGenerators/MvvmAIO.R3.SourceGenerators/` | Shared generator logic (`.projitems`; `ObservableEvents/` + partial generators) |
 | `MvvmAIO.R3.SourceGenerators.Roslyn4031` | Roslyn **4.3.1** analyzer build |
 | `MvvmAIO.R3.SourceGenerators.Roslyn4120` | Roslyn **4.12** analyzer build |
 | `MvvmAIO.R3.SourceGenerators.Roslyn5000` | Roslyn **5.0** analyzer build |
@@ -35,12 +35,12 @@ Primary solution: **`MvvmAIO.R3.SourceGenerators.slnx`**
 
 ### Observable events pipeline (summary)
 
-1. **Post-init** bootstrap for unresolved call sites (`NullEvents`).
-2. **Incremental** collection of invocation targets from user syntax.
-3. **Interface pipeline**: `EventInterfaceDescriptor` hierarchy → `EventInterfaces.{kind}.g.cs` + per-type `*Impl` files.
-4. **Attached routed** (Avalonia): separate extensions returning `Observable<T>`.
+1. **Post-init** (`ObservableEventsGenerator.cs`) — bootstrap for unresolved call sites (`NullEvents`).
+2. **Discovery** (`ObservableEventsGenerator.Discovery.cs`) — collect invocation targets from user syntax.
+3. **Interface pipeline** (`InterfacePipeline` → `InterfaceEmission` / `GenericConstraints`) — `EventInterfaceDescriptor` hierarchy → `EventInterfaces.{kind}.g.cs` + per-type `*Impl` files.
+4. **Attached routed** (`AttachedRouted`) — Avalonia extensions returning `Observable<T>`.
 
-Static `ObservableEventsStatics` generation is **disabled**.
+Static `ObservableEventsStatics` generation is **disabled**. Contributor file layout: [ObservableEventsGenerator](./observable-events-generator.md).
 
 ### R3Command pipeline (summary)
 
@@ -77,10 +77,13 @@ See the **Generated artifacts** table on [Observable events](../generators/obser
 
 | Area | Files |
 |------|--------|
-| Event pipeline | `ObservableEventsGenerator.cs` |
+| Observable events orchestration | `ObservableEventsGenerator.cs` (`Initialize` only) |
+| Observable events (full map) | [ObservableEventsGenerator](./observable-events-generator.md) — partials + `ObservableEvents/*` |
 | Event syntax | `ObservableEventsSyntaxFactory.cs` |
 | Bootstrap | `GeneratorBootstrapSyntaxFactory.cs` |
 | Commands | `R3CommandGenerator.cs`, `R3CommandSyntaxFactory.cs` |
 | Diagnostics | `Diagnostics/DiagnosticDescriptors.cs` |
+
+Canonical maintainer index: [AGENTS.md](https://github.com/MvvmAIO/MvvmAIO.R3.SourceGenerators/blob/master/AGENTS.md) in the generator repo.
 
 See [Roslyn targeting](./roslyn-targeting.md) for analyzer selection.

@@ -275,10 +275,12 @@ attachedHost
 
 ## 延伸阅读
 
+- [架构总览](../architecture/overview.md)
+- [ObservableEventsGenerator（贡献者）](../architecture/observable-events-generator.md) — 生成器仓库源码布局（无使用者 API 变更）
 - [Roslyn 目标](../architecture/roslyn-targeting.md)
 - [R3Command](./r3-command.md)
 - [诊断参考](../diagnostics/reference.md)
 
 ::: info 贡献者
-生成器仓库内的 [设计文档](https://github.com/MvvmAIO/MvvmAIO.R3.SourceGenerators/blob/master/docs/design-interface-based-event-generation.md) 含更细的实现笔记；用户向说明以本站为准。
+本站 [ObservableEventsGenerator（贡献者）](../architecture/observable-events-generator.md) 与生成器仓库 [AGENTS.md](https://github.com/MvvmAIO/MvvmAIO.R3.SourceGenerators/blob/master/AGENTS.md)、[设计文档](https://github.com/MvvmAIO/MvvmAIO.R3.SourceGenerators/blob/master/docs/design-interface-based-event-generation.md)（中文，§11）描述实现布局；用户向说明以本站生成器页面为准。
 :::

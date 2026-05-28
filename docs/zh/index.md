@@ -39,6 +39,7 @@ features:
 | [Observable 事件](./generators/observable-events.md) | 接口管线、类型层次、路由事件 |
 | [R3Command](./generators/r3-command.md) | 命令生成与签名矩阵 |
 | [诊断](./diagnostics/reference.md) | 全部 **R3SG** 诊断 ID |
+| [架构](./architecture/overview.md) | 仓库与管线；贡献者见 [ObservableEventsGenerator](./architecture/observable-events-generator.md) |
 | [示例](./samples.md) | WPF / Avalonia 示例仓库 |
 
 本站为包的**权威手册**，比 GitHub README 更完整。参见 [关于本站](./about-this-site.md)。

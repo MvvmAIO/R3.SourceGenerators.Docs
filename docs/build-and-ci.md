@@ -10,7 +10,7 @@
 |------|---------|
 | Restore / build | `dotnet build MvvmAIO.R3.SourceGenerators.slnx` |
 | Test | `dotnet test MvvmAIO.R3.SourceGenerators.slnx` |
-| Full CI (Nuke) | `dotnet run --project build/MvvmAIO.R3.SourceGenerators.Build.csproj -- Ci` |
+| Full CI (Nuke) | From generator repo root: `dotnet run --project build/_build.csproj -- --root . --target Ci --configuration Release` |
 
 Workflows in **MvvmAIO.R3.SourceGenerators**:
 

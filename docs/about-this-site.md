@@ -10,6 +10,7 @@
 | [GitHub README](https://github.com/MvvmAIO/MvvmAIO.R3.SourceGenerators/blob/master/README.md) | Landing-page overview and quick examples |
 | [CHANGELOG](https://github.com/MvvmAIO/MvvmAIO.R3.SourceGenerators/blob/master/CHANGELOG.md) | Release notes and upgrade notes |
 | [Design doc (repo)](https://github.com/MvvmAIO/MvvmAIO.R3.SourceGenerators/blob/master/docs/design-interface-based-event-generation.md) | Internal design notes (Chinese); user guides here are derived and may lag slightly |
+| [ObservableEventsGenerator (this site)](./architecture/observable-events-generator.md) | Contributor source layout (English); [简体中文](./zh/architecture/observable-events-generator.md) |
 
 ## Tech stack
 

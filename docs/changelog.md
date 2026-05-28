@@ -17,6 +17,10 @@ This page summarizes recent releases for quick orientation. When in doubt, use t
 
 ## Recent releases (summary)
 
+### Unreleased (generator repo)
+
+- **Internal** — `ObservableEventsGenerator` split into `partial` files; removed unused pre–interface-pipeline wrapper codegen. **No consumer API or generated-output change.** Docs: [ObservableEventsGenerator (contributors)](./architecture/observable-events-generator.md).
+
 ### 0.6.1 (2026-05-24)
 
 - **IntelliSense polish** — bootstrap fallback extensions and `NullEvents` use `[EditorBrowsable(Never)]` so cross-assembly completion favors type-specific generated overloads.

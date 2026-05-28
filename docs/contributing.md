@@ -15,6 +15,8 @@ Work in **[MvvmAIO.R3.SourceGenerators](https://github.com/MvvmAIO/MvvmAIO.R3.So
 
 Read **[AGENTS.md](https://github.com/MvvmAIO/MvvmAIO.R3.SourceGenerators/blob/master/AGENTS.md)** in the generator repo for conventions (SyntaxFactory style, `.Temp/` scratch, diagnostic IDs).
 
+For **ObservableEventsGenerator** file layout and pipeline, see [ObservableEventsGenerator (contributors)](./architecture/observable-events-generator.md) (English) / [简体中文](./zh/architecture/observable-events-generator.md).
+
 ## Documentation changes
 
 Work in **[R3.SourceGenerators.Docs](https://github.com/MvvmAIO/R3.SourceGenerators.Docs)**:
@@ -37,6 +39,7 @@ When a new **MvvmAIO.R3.SourceGenerators** package version is published, sync th
 | `generators/r3-command.md` | `[R3Command]` or command diagnostics |
 | `getting-started.md` | Install or prerequisites |
 | `changelog.md` | Each dated release (summary bullets) |
+| `architecture/observable-events-generator.md` (+ `docs/zh/…`) | Generator repo **contributor** layout for observable events (no consumer API change) |
 
 Authoritative package history: [generator CHANGELOG](https://github.com/MvvmAIO/MvvmAIO.R3.SourceGenerators/blob/master/CHANGELOG.md).
 

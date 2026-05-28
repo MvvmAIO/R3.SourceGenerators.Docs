@@ -10,7 +10,7 @@
 |------|------|
 | 构建 | `dotnet build MvvmAIO.R3.SourceGenerators.slnx` |
 | 测试 | `dotnet test MvvmAIO.R3.SourceGenerators.slnx` |
-| 完整 CI | `dotnet run --project build/... -- Ci` |
+| 完整 CI（Nuke） | 在生成器仓库根目录：`dotnet run --project build/_build.csproj -- --root . --target Ci --configuration Release` |
 
 Workflow：`dotnet.yml`、`nuget-publish.yml`。
 

@@ -18,7 +18,7 @@
 
 | 路径 | 作用 |
 |------|------|
-| `MvvmAIO.R3.SourceGenerators/` | 共享生成器逻辑（`.shproj`） |
+| `MvvmAIO.R3.SourceGenerators/MvvmAIO.R3.SourceGenerators/` | 共享生成器逻辑（`.projitems`；`ObservableEvents/` + partial） |
 | `*.Roslyn4031` / `*.Roslyn4120` / `*.Roslyn5000` | 各 Roslyn 版本分析器构建 |
 | `*.Package/` | NuGet 打包 |
 | `*.Tests/` | Verify 快照测试 |
@@ -33,12 +33,12 @@
 
 ### Observable 事件管线（概要）
 
-1. **Post-init** 引导未解析调用点（`NullEvents`）。
-2. **增量**收集语法中的调用目标。
-3. **接口管线**：`EventInterfaces.{kind}.g.cs` + 每类型 `*Impl`。
-4. **附加路由**（Avalonia）：独立 `Observable<T>` 扩展。
+1. **Post-init**（`ObservableEventsGenerator.cs`）— 引导未解析调用点（`NullEvents`）。
+2. **Discovery**（`ObservableEventsGenerator.Discovery.cs`）— 从语法收集调用目标。
+3. **接口管线**（`InterfacePipeline` → `InterfaceEmission` / `GenericConstraints`）— `EventInterfaces.{kind}.g.cs` + 每类型 `*Impl`。
+4. **附加路由**（`AttachedRouted`）— Avalonia 独立 `Observable<T>` 扩展。
 
-静态 `ObservableEventsStatics` **未启用**。
+静态 `ObservableEventsStatics` **未启用**。贡献者文件布局：[ObservableEventsGenerator](./observable-events-generator.md)。
 
 ### R3Command 管线（概要）
 
@@ -75,8 +75,13 @@ Post-init 注册特性、校验 partial、签名矩阵与可选 `CanExecute`。
 
 | 区域 | 文件 |
 |------|------|
-| 事件管线 | `ObservableEventsGenerator.cs` |
-| 命令 | `R3CommandGenerator.cs` |
+| Observable 事件编排 | `ObservableEventsGenerator.cs`（仅 `Initialize`） |
+| Observable 事件（完整表） | [ObservableEventsGenerator](./observable-events-generator.md) — partial 与 `ObservableEvents/*` |
+| 事件语法 | `ObservableEventsSyntaxFactory.cs` |
+| 引导 | `GeneratorBootstrapSyntaxFactory.cs` |
+| 命令 | `R3CommandGenerator.cs`、`R3CommandSyntaxFactory.cs` |
 | 诊断 | `Diagnostics/DiagnosticDescriptors.cs` |
+
+维护者权威索引：生成器仓库 [AGENTS.md](https://github.com/MvvmAIO/MvvmAIO.R3.SourceGenerators/blob/master/AGENTS.md)。
 
 详见 [Roslyn 目标](./roslyn-targeting.md)。

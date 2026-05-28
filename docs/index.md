@@ -39,6 +39,7 @@ Until **1.0.0**, breaking changes may ship without a long deprecation window. Re
 | [Observable events](./generators/observable-events.md) | Interface pipeline, hierarchy, routed events |
 | [R3Command](./generators/r3-command.md) | Command generation and signature matrix |
 | [Diagnostics](./diagnostics/reference.md) | Every **R3SG** diagnostic ID |
+| [Architecture](./architecture/overview.md) | Repositories, pipelines; [ObservableEventsGenerator](./architecture/observable-events-generator.md) for contributors |
 | [Samples](./samples.md) | WPF and Avalonia demo repository |
 
 This site is the **canonical manual** for the package — deeper than the GitHub README alone. See [About this site](./about-this-site.md).

@@ -15,6 +15,8 @@
 
 请参阅仓库 **[AGENTS.md](https://github.com/MvvmAIO/MvvmAIO.R3.SourceGenerators/blob/master/AGENTS.md)**。
 
+**ObservableEventsGenerator** 源码布局与管线见 [ObservableEventsGenerator（贡献者）](./architecture/observable-events-generator.md)（中文）/ [English](../architecture/observable-events-generator.md)。
+
 ## 文档
 
 在 **[R3.SourceGenerators.Docs](https://github.com/MvvmAIO/R3.SourceGenerators.Docs)** 中编辑：
@@ -37,6 +39,7 @@
 | `generators/r3-command.md` | `[R3Command]` 或命令诊断 |
 | `getting-started.md` | 安装或前提变更 |
 | `changelog.md` | 每个带日期的发布（摘要） |
+| `architecture/observable-events-generator.md`（及 `docs/zh/…`） | 事件生成器**贡献者**源码结构（无使用者 API 变更时亦需保持同步） |
 
 权威记录：[生成器 CHANGELOG](https://github.com/MvvmAIO/MvvmAIO.R3.SourceGenerators/blob/master/CHANGELOG.md)。
 

@@ -10,6 +10,7 @@
 | [GitHub README](https://github.com/MvvmAIO/MvvmAIO.R3.SourceGenerators/blob/master/README.md) | 仓库首页概览与简短示例 |
 | [CHANGELOG](https://github.com/MvvmAIO/MvvmAIO.R3.SourceGenerators/blob/master/CHANGELOG.md) | 版本说明与升级提示 |
 | [仓库内设计文档](https://github.com/MvvmAIO/MvvmAIO.R3.SourceGenerators/blob/master/docs/design-interface-based-event-generation.md) | 内部设计笔记；用户向页面由此提炼 |
+| [ObservableEventsGenerator（本站）](./architecture/observable-events-generator.md) | 贡献者源码布局；[English](../architecture/observable-events-generator.md) |
 
 ## 技术栈
 

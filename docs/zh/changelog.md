@@ -17,6 +17,10 @@
 
 ## 最近版本（摘要）
 
+### Unreleased（生成器仓库）
+
+- **内部** — `ObservableEventsGenerator` 拆分为 `partial` 文件；移除未使用的旧 wrapper 发码。**使用者 API 与生成物无变更。** 文档：[ObservableEventsGenerator（贡献者）](./architecture/observable-events-generator.md)。
+
 ### 0.6.1（2026-05-24）
 
 - **IntelliSense**：bootstrap 回退扩展与 `NullEvents` 标记 `[EditorBrowsable(Never)]`，跨程序集补全优先显示类型专用重载。

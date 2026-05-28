@@ -22,6 +22,10 @@ const enSidebar = [
     text: 'Architecture',
     items: [
       { text: 'Overview', link: '/architecture/overview' },
+      {
+        text: 'ObservableEventsGenerator',
+        link: '/architecture/observable-events-generator',
+      },
       { text: 'Roslyn targeting', link: '/architecture/roslyn-targeting' },
     ],
   },
@@ -48,6 +52,10 @@ const zhSidebar = [
     text: '架构',
     items: [
       { text: '总览', link: '/zh/architecture/overview' },
+      {
+        text: 'ObservableEventsGenerator',
+        link: '/zh/architecture/observable-events-generator',
+      },
       { text: 'Roslyn 目标', link: '/zh/architecture/roslyn-targeting' },
     ],
   },

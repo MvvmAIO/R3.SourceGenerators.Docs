@@ -275,6 +275,12 @@ Runnable demos: [MvvmAIO.R3.SourceGenerators.Samples](https://github.com/MvvmAIO
 
 ## Further reading
 
+- [Architecture overview](../architecture/overview.md)
+- [ObservableEventsGenerator (contributors)](../architecture/observable-events-generator.md) — generator repo source layout (no consumer API change)
 - [Roslyn targeting](../architecture/roslyn-targeting.md)
 - [R3Command](./r3-command.md)
 - [Diagnostics reference](../diagnostics/reference.md)
+
+::: info Contributors
+Generator repo [AGENTS.md](https://github.com/MvvmAIO/MvvmAIO.R3.SourceGenerators/blob/master/AGENTS.md) and [design doc §11](https://github.com/MvvmAIO/MvvmAIO.R3.SourceGenerators/blob/master/docs/design-interface-based-event-generation.md) complement [ObservableEventsGenerator (contributors)](../architecture/observable-events-generator.md) on this site.
+:::
