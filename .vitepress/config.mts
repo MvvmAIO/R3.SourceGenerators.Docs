@@ -69,7 +69,13 @@ export default defineConfig({
   description: 'Roslyn source generators for R3-based MVVM workflows',
   base: '/R3.SourceGenerators.Docs/',
   cleanUrls: true,
-  lastUpdated: true,
+  lastUpdated: {
+    formatOptions: {
+      dateStyle: 'medium',
+      timeStyle: 'short',
+      timeZoneName: 'short',
+    },
+  },
   head: [
     [
       'link',

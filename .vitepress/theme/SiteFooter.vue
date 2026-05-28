@@ -2,6 +2,7 @@
 import { computed, onMounted, onUnmounted, ref, watch } from 'vue'
 import { useData } from 'vitepress'
 import { commitUrl, siteMeta } from '../site-meta.shared'
+import { formatLocalDateTime, siteFallbackLocale } from './format-local-datetime'
 
 const { theme, frontmatter, localeIndex } = useData()
 
@@ -20,7 +21,15 @@ function clearFooterOffset() {
   document.documentElement.style.removeProperty('--vp-site-footer-offset')
 }
 
+function refreshFormattedDate() {
+  formattedSiteUpdated.value = formatLocalDateTime(
+    siteMeta.lastUpdated,
+    siteFallbackLocale(isZh.value),
+  )
+}
+
 onMounted(() => {
+  refreshFormattedDate()
   syncFooterOffset()
   resizeObserver = new ResizeObserver(syncFooterOffset)
   if (footerRef.value) resizeObserver.observe(footerRef.value)
@@ -41,18 +50,9 @@ watch(
 
 const isZh = computed(() => localeIndex.value === 'zh')
 
-const formattedSiteUpdated = computed(() => {
-  const locale = isZh.value ? 'zh-CN' : 'en-US'
-  const date = new Date(siteMeta.lastUpdated)
-  if (Number.isNaN(date.getTime())) return siteMeta.lastUpdated
-
-  return new Intl.DateTimeFormat(locale, {
-    dateStyle: 'medium',
-    timeStyle: 'short',
-    timeZone: 'UTC',
-    timeZoneName: 'short',
-  }).format(date)
-})
+const formattedSiteUpdated = ref(
+  formatLocalDateTime(siteMeta.lastUpdated, siteFallbackLocale(isZh.value)),
+)
 
 const buildLink = computed(() => commitUrl(siteMeta.commitSha))
 </script>
