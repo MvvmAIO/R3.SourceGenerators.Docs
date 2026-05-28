@@ -1,8 +1,87 @@
 :root {
   --vp-c-brand-1: #5b6ee8;
   --vp-c-brand-2: #4a5cd4;
+  --vp-c-brand-3: #3f52bf;
+  --vp-font-family-base:
+    "Inter",
+    "Segoe UI",
+    "PingFang SC",
+    "Hiragino Sans GB",
+    "Microsoft YaHei",
+    system-ui,
+    -apple-system,
+    sans-serif;
+  --vp-font-family-mono:
+    "JetBrains Mono",
+    "Cascadia Code",
+    "Fira Code",
+    ui-monospace,
+    SFMono-Regular,
+    Menlo,
+    monospace;
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: linear-gradient(120deg, #5b6ee8 15%, #8d9cff 85%);
+  --vp-home-hero-image-background-image: radial-gradient(
+    circle at 30% 30%,
+    rgba(91, 110, 232, 0.28),
+    rgba(141, 156, 255, 0.12) 42%,
+    transparent 72%
+  );
+  --vp-home-hero-image-filter: blur(42px);
+}
+
+.VPContent .container {
+  max-width: 1240px;
+}
+
+.vp-doc {
+  font-size: 16px;
+  line-height: 1.78;
+  letter-spacing: 0.01em;
+}
+
+.vp-doc h1,
+.vp-doc h2,
+.vp-doc h3 {
+  letter-spacing: -0.01em;
+}
+
+.vp-doc p,
+.vp-doc li {
+  color: var(--vp-c-text-1);
+}
+
+.vp-doc table {
+  display: table;
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.vp-doc tr:nth-child(2n) {
+  background: color-mix(in srgb, var(--vp-c-bg-soft) 72%, transparent);
+}
+
+.vp-doc div[class*='language-'] pre {
+  padding-top: 18px;
+  padding-bottom: 18px;
 }
 
 .vp-doc div[class*='language-'] {
-  font-size: 0.92em;
+  font-size: 0.9em;
+  border-radius: 12px;
+}
+
+.VPFeature {
+  border-radius: 14px;
+  border: 1px solid var(--vp-c-divider);
+}
+
+.VPFeature:hover {
+  border-color: color-mix(in srgb, var(--vp-c-brand-1) 42%, var(--vp-c-divider));
+}
+
+.VPHero .text {
+  max-width: 760px;
 }
