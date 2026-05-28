@@ -91,6 +91,11 @@
   padding-bottom: var(--vp-site-footer-offset);
 }
 
+/* Built-in VPFooter is replaced by SiteFooter in layout-bottom slot */
+.Layout > .VPFooter:not(.site-footer) {
+  display: none !important;
+}
+
 .VPFooter.site-footer--fixed {
   position: fixed;
   bottom: 0;
