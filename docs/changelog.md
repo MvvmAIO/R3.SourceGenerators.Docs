@@ -17,9 +17,9 @@ This page summarizes recent releases for quick orientation. When in doubt, use t
 
 ## Recent releases (summary)
 
-### Unreleased (generator repo)
+### 0.6.2 (2026-05-31)
 
-- **Internal** — `ObservableEventsGenerator` split into `partial` files; removed unused pre–interface-pipeline wrapper codegen. **No consumer API or generated-output change.** Docs: [ObservableEventsGenerator (contributors)](./architecture/observable-events-generator.md).
+- **Internal** — `ObservableEventsGenerator` split into `partial` files; removed unused pre–interface-pipeline wrapper codegen. Expanded diagnostic test coverage (`R3SG1001`, `R3SG2001`, `R3SG2002`). **No consumer API or generated-output change.** Docs: [ObservableEventsGenerator (contributors)](./architecture/observable-events-generator.md).
 
 ### 0.6.1 (2026-05-24)
 

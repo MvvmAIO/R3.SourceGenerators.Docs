@@ -17,9 +17,9 @@
 
 ## 最近版本（摘要）
 
-### Unreleased（生成器仓库）
+### 0.6.2（2026-05-31）
 
-- **内部** — `ObservableEventsGenerator` 拆分为 `partial` 文件；移除未使用的旧 wrapper 发码。**使用者 API 与生成物无变更。** 文档：[ObservableEventsGenerator（贡献者）](./architecture/observable-events-generator.md)。
+- **内部** — `ObservableEventsGenerator` 拆分为 `partial` 文件；移除未使用的旧 wrapper 发码。补充诊断测试覆盖（`R3SG1001`、`R3SG2001`、`R3SG2002`）。**使用者 API 与生成物无变更。** 文档：[ObservableEventsGenerator（贡献者）](./architecture/observable-events-generator.md)。
 
 ### 0.6.1（2026-05-24）
 
